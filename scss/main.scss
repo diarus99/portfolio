@@ -1,6 +1,70 @@
-$primary-color: #444;
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
+  @include backround;
   background: $primary-color;
   color: #fff;
+  height: 100%;
+  margin: 0; /*takes the margin away*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; /*space between lines*/
+}
+
+//headings:
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; /*the font is much thinner*/
+  &.large-heading {
+    font-size: 6rem;
+  }
+  &.small-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(
+      /* opacity of 0.5*/ lighten($primary-color, 2),
+      0.5
+    ); /*lighten the background color with 2*/
+  }
+}
+
+a {
+  /*links*/
+  color: #fff;
+  text-decoration: none; /*no underline*/
+}
+
+header {
+  position: fixed; /*to always be at the top*/
+  z-index: 2; /*work only with position; the element is in front of z-index:1*/
+  //width: 100%;
+}
+.last-name {
+  color: $secondary-color;
+}
+main {
+  padding: 4rem;
+  height: 100%;
+  &#home {
+    /*any main that has the id=home*/
+    overflow: hidden; /*no scrollbars*/
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+  .icons {
+    margin-top: 1rem;
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
 }
