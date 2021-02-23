@@ -8,7 +8,7 @@ $background-opacity: 0.9;
   /*transition in a function to use it multiple times*/
   transition: all 1s ease-out;
 }
-@mixin backround {
+@mixin background {
   @if $showImage {
     &#bg-image {
       background: $homeImage;

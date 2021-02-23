@@ -1,3 +1,27 @@
+.menu-button {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  /*transition in a function to use it multiple times*/
+  transition: all 1s ease-out; }
+  .menu-button .button-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    /*transition in a function to use it multiple times*/
+    transition: all 1s ease-out; }
+  .menu-button.close {
+    transform: rotate(180deg); }
+    .menu-button.close .button-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-button.close .button-line:nth-child(2) {
+      opacity: 0; }
+    .menu-button.close .button-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
 * {
   box-sizing: border-box; }
 
@@ -7,7 +31,7 @@ body {
   height: 100%;
   margin: 0;
   /*takes the margin away*/
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Taho ma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   /*space between lines*/ }
   body#bg-image {
@@ -53,7 +77,8 @@ header {
   position: fixed;
   /*to always be at the top*/
   z-index: 2;
-  /*work only with position; the element is in front of z-index:1*/ }
+  /*work only with position; the element is in front of z-index:1*/
+  width: 100%; }
 
 .last-name {
   color: #eece1a; }

@@ -1,16 +1,17 @@
 @import "config";
+@import "menu";
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  @include backround;
+  @include background;
   background: $primary-color;
   color: #fff;
   height: 100%;
   margin: 0; /*takes the margin away*/
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Taho ma, Geneva, Verdana, sans-serif;
   line-height: 1.5; /*space between lines*/
 }
 
@@ -42,7 +43,7 @@ a {
 header {
   position: fixed; /*to always be at the top*/
   z-index: 2; /*work only with position; the element is in front of z-index:1*/
-  //width: 100%;
+  width: 100%;
 }
 .last-name {
   color: $secondary-color;
